@@ -1,0 +1,12 @@
+#!/usr/bin/env python3
+import time
+import RPi.GPIO as GPIO
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(7, GPIO.OUT)
+while True:
+    LEDon = GPIO.output(7, 1)   #LED燈亮
+    print ("Current LED is ON")
+    time.sleep(0.5)
+    LEDoff = GPIO.output(7,0)   #LED燈熄
+    print ("Current LED is off")
+    time.sleep(0.5)
